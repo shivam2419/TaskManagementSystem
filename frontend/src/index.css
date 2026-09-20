@@ -116,8 +116,9 @@ textarea {
 
 label {
   display: flex;
-  flex: 1;
-  min-width: 180px;
+  flex: 1 1 180px;
+  min-width: 0;
+  max-width: 100%;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 12px;
@@ -130,6 +131,7 @@ input,
 select,
 textarea {
   width: 100%;
+  max-width: 100%;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.24);
   border-radius: 10px;
@@ -202,15 +204,18 @@ button.secondary.danger {
 }
 
 .task-table-wrap {
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .task-table {
   width: 100%;
-  min-width: 1100px;
+  min-width: 720px;
   border-collapse: collapse;
   margin-top: 8px;
   font-family: 'Segoe UI', Inter, sans-serif;
+  table-layout: fixed;
 }
 
 .task-table th,
@@ -395,8 +400,12 @@ button.secondary.danger {
     gap: 8px;
   }
 
+  .task-board {
+    overflow: hidden;
+  }
+
   .task-table {
-    min-width: 760px;
+    min-width: 640px;
   }
 
   .task-table-wrap {
@@ -426,7 +435,7 @@ button.secondary.danger {
   }
 
   .task-table {
-    min-width: 680px;
+    min-width: 560px;
     font-size: 0.92rem;
   }
 
