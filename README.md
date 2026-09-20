@@ -29,7 +29,9 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-The API will be available at `http://127.0.0.1:8000/api/`.
+The backend is deployed at `https://taskmanagementsystem-jgqd.onrender.com/api/` and the frontend is deployed at `https://task-management-system-inky-sigma.vercel.app/`.
+
+For local development, the API runs at `http://127.0.0.1:8000/api/`.
 
 Key endpoints:
 - `GET /api/tasks/` — list tasks. Supports query params: `date`, `date_from`, `date_to`, `task_name` (contains match), `status`.

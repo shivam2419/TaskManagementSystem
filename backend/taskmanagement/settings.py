@@ -87,10 +87,15 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100,
 }
 
-# Frontend dev servers (Vite defaults). Adjust/add origins as needed.
+# Frontend origins used during local development and deployment.
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+    'https://task-management-system-inky-sigma.vercel.app',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://task-management-system-inky-sigma.vercel.app',
 ]
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
